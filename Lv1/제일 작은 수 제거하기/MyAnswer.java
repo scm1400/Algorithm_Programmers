@@ -32,5 +32,5 @@ class Solution {
         return answer;
     }
 }
-//arr 에서 가장 작은 수를 제거한 배열을 리턴
+//arr 에서 가장 작은 수를 제거한 배열을 리턴dirtndh
 //배열이 빈 배열인 경우엔 배열에 -1을 채워 리턴
