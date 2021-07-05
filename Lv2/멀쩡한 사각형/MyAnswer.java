@@ -2,17 +2,17 @@ class Solution {
     public long solution(long w, long h) {
         long answer = 1;
         long size = w * h;
-        long GCD = GCD(Math.max(w, h),Math.min(w, h));
-        
-        answer = size - GCD * (w/GCD + h/GCD -1);
-        
+        long GCD = GCD(Math.max(w, h), Math.min(w, h));
+
+        answer = size - GCD * (w / GCD + h / GCD - 1);
+
         return answer;
     }
-    
-    static long GCD(long a, long b){ // ÃÖ´ë°ø¾à¼ö
-    	if (a%b == 0) {
-    		return b;
-    	}
-    	return GCD(b, a % b);
+
+    static long GCD(long a, long b) { // ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½
+        if (a % b == 0) {
+            return b;
+        }
+        return GCD(b, a % b);
     }
 }
