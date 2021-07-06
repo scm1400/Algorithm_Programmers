@@ -1,18 +1,19 @@
+import java.util.HashSet;
 
 class Solution {
-    public boolean solution(String[] phone_book) {
+    public boolean solution(String[] phoneBook) {
         boolean answer = true;
-
-        for (String string : phone_book) {
-            for (String string2 : phone_book) {
-                if (!string.equals(string2)) {
-                    if (string2.startsWith(string) || string.startsWith(string2)) {
-                        return false;
-                    }
+        HashSet<String> set = new HashSet<>();
+        for (int i = 0; i < phoneBook.length; i++)
+            set.add(phoneBook[i]);
+        for (int i = 0; i < phoneBook.length; i++) {
+            for (int j = 1; j < phoneBook[i].length(); j++) {
+                if (set.contains(phoneBook[i].substring(0, j))) {
+                    answer = false;
+                    return answer;
                 }
             }
         }
-
         return answer;
     }
 }
