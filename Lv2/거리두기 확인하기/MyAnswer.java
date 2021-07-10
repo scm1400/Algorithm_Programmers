@@ -35,6 +35,9 @@ class Solution {
                                 } else if (l == 0) {
                                     if (arr[(i * 2 + k) / 2][j] == 'O')
                                         return 0;
+                                } else {
+                                    if (!(arr[i][j + l] == 'X' && arr[i + k][j] == 'X'))
+                                        return 0;
                                 }
                             }
 
